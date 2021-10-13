@@ -1,7 +1,7 @@
 import React from "react";
 
-const Header = ({ children }) => {
-  return <div className="py-8 bg-blue-400">{children}</div>;
+const Header = ({ children, bgColor }) => {
+  return <div className={`py-8 bg-${bgColor}`}>{children}</div>;
 };
 
 export default Header;
