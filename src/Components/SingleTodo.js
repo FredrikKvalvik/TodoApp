@@ -2,9 +2,9 @@ import React from "react";
 /* import TertiaryButton from './TertiaryButton'
 import SecondaryButton from './SecondaryButton' */
 import Button from "./Button";
+import CheckBox from "./CheckBox";
+
 import { ReactComponent as Edit } from "./../resources/SVGs/edit.svg";
-import { ReactComponent as Circle } from "./../resources/SVGs/circle.svg";
-import { ReactComponent as CheckCircle } from "./../resources/SVGs/check-circle.svg";
 import { ReactComponent as Trash } from "./../resources/SVGs/trash.svg";
 
 const SingleTodo = ({ todo }) => {
@@ -12,7 +12,7 @@ const SingleTodo = ({ todo }) => {
   return (
     <div>
       <div>
-        <input type="checkbox" name="isDone" id={`check${id}`} />
+        <CheckBox id={id} />
         <p>{content}</p>
       </div>
       <div>
