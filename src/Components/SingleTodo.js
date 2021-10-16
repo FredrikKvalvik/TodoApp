@@ -16,10 +16,10 @@ const SingleTodo = ({ todo }) => {
         <p>{content}</p>
       </div>
       <div>
-        <Button style="">
+        <Button>
           <Edit />
         </Button>
-        <Button style="">
+        <Button>
           <Trash />
         </Button>
       </div>
