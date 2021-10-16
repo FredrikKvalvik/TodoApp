@@ -1,14 +1,30 @@
-import React from "react";
+import { React, useState } from "react";
+
 import Wrapper from "./Components/Wrapper";
 import Header from "./Components/Header";
 import Button from "./Components/Button";
-
+import TodoIterator from "./Components/TodoIterator";
 const App = () => {
   const [todoInput, setTodoInput] = useState("");
 
   const handleTodoInput = (e) => {
-    setTodoInput(e.value);
+    setTodoInput(e.target.value);
   };
+
+  const todoList = [
+    {
+      content: "heisann",
+      id: 123123,
+    },
+    {
+      content: "heisann",
+      id: 123123,
+    },
+    {
+      content: "heisann",
+      id: 123123,
+    },
+  ];
 
   return (
     <div className="bg-gray-50 w-screen h-screen">
@@ -18,13 +34,14 @@ const App = () => {
           <input
             type="text"
             placeholder="gjøremål"
-            onchange={handleTodoInput}
+            onChange={handleTodoInput}
           />
           <Button>Legg til listen</Button>
         </div>
       </Header>
       <Wrapper bgColor="white">
         <h2>TODO:</h2>
+        <TodoIterator todoList={todoList} />
       </Wrapper>
     </div>
   );
